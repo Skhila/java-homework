@@ -27,14 +27,14 @@ public class Main {
         }
 
 //        Created 4 extra Circles to reach the limit
-        Circle c1 = new Circle(1);
-        Circle c2 = new Circle(2);
-        Circle c3 = new Circle(3);
-        Circle c4 = new Circle(4);
+        Circle c1 = new Circle(2);
+        Circle c2 = new Circle(3);
+        Circle c3 = new Circle(4);
+        Circle c4 = new Circle(5);
 
         try{
 //            This Circle caused a LimitException
-            Circle circle = new Circle(5);
+            Circle circle = new Circle(6);
         }catch (LimitException limitException){
             System.out.println(limitException.getMessage());
         }
@@ -74,7 +74,7 @@ public class Main {
 
 //    Function for Tasks #10-11
     private static boolean phoneNumberValidation(String phoneNumber){
-        String phoneNumberPattern = "(5[59][529]\\d{6})";
+        String phoneNumberPattern = "(5(55|92|95|99)\\d{6})";
 
         Pattern phoneNumberPatternCompiled = Pattern.compile(phoneNumberPattern);
 
