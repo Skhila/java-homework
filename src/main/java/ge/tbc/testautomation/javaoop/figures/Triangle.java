@@ -16,7 +16,7 @@ public class Triangle extends Figure{
         this.h = generateRandomHeight();
     }
 
-//    Overridden Functions
+//    Overridden Methods
     @Override
     public double getArea() {
 //        In this case B is a Base and H is a Height of a Triangle
@@ -24,11 +24,16 @@ public class Triangle extends Figure{
     }
 
     @Override
-    public double getPerimeter() {
+    public double getLength() {
         return a+b+c;
     }
 
-//    Getter/Setter
+    @Override
+    public void printPackageName() {
+        System.out.println(this.getClass().getPackage());
+    }
+
+    //    Getter/Setter
     public double getA() {
         return a;
     }
@@ -66,4 +71,5 @@ public class Triangle extends Figure{
         Random random = new Random();
         return random.nextDouble(20);
     }
+
 }
