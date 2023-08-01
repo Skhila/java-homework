@@ -10,15 +10,20 @@ public class Rectangle extends Figure{
         this.b = b;
     }
 
-//    Overridden Functions
+//    Overridden Methods
     @Override
     public double getArea() {
         return a*b;
     }
 
     @Override
-    public double getPerimeter() {
+    public double getLength() {
         return 2*(a+b);
+    }
+
+    @Override
+    public void printPackageName() {
+        System.out.println(this.getClass().getPackage());
     }
 
 //    Getter/Setter
