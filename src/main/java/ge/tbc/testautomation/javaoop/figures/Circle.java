@@ -7,7 +7,7 @@ import ge.tbc.testautomation.exceptionsStringOperationsRegex.RadiusException;
 
 import java.text.DecimalFormat;
 
-public class Circle extends Figure implements IResizableCircle, IValidCircle {
+public class Circle extends Figure implements IResizableCircle, IValidCircle, Comparable {
     private final DecimalFormat formatOutput = new DecimalFormat("#.###");
     public static final double PI = Math.PI;
     private double radius;
@@ -55,7 +55,22 @@ public class Circle extends Figure implements IResizableCircle, IValidCircle {
         return circle.getRadius() > 0;
     }
 
-//    Getter/Setter
+//    toString
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
+
+//    comparable
+    @Override
+    public int compareTo(Object o) {
+        Circle other = (Circle)o;
+        return Double.compare(this.radius, other.radius);
+    }
+
+    //    Getter/Setter
     public double getRadius(){
         return Double.parseDouble(formatOutput.format(this.radius));
     }
