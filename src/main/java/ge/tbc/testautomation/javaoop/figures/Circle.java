@@ -2,6 +2,7 @@ package ge.tbc.testautomation.javaoop.figures;
 
 import ge.tbc.testautomation.abstractClassesInterfaces.interfaces.IResizableCircle;
 import ge.tbc.testautomation.abstractClassesInterfaces.interfaces.IValidCircle;
+import ge.tbc.testautomation.annotationsAndComparators.VariableNameAnnotation;
 import ge.tbc.testautomation.exceptionsStringOperationsRegex.LimitException;
 import ge.tbc.testautomation.exceptionsStringOperationsRegex.RadiusException;
 
