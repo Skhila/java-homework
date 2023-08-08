@@ -42,4 +42,13 @@ public class Rectangle extends Figure{
     public void setB(double b) {
         this.b = b;
     }
+
+//    toString Method
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "a=" + a +
+                ", b=" + b +
+                '}';
+    }
 }
